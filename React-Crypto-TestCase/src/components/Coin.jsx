@@ -29,7 +29,7 @@ function Coin(prop) {
                 />
               </div>
               <div className="flex justify-center items-center">
-                <div className="text-white text-2xl uppercase">
+                <div className="text-white text-lg  md:text-2xl uppercase">
                   {response[0]}
                 </div>
                 <span className="text-[#aaa] text-xs font-light pl-[3px] pt-2">
