@@ -9,7 +9,7 @@ function Coin(prop) {
           <div
             key={index}
             className={classNames(
-              " w-full md:w-[480px] h-20 border border-gray-100 rounded-lg my-3 ",
+              " md:w-[480px] h-20 border border-gray-100 rounded-lg my-3 ",
 
               {
                 "bg-gradient-to-r from-[#202022] to-[#dc202025]":
@@ -24,9 +24,7 @@ function Coin(prop) {
             <div className="flex justify-between items-center h-full">
               <div classNames="w-20 h-20 rounded-lg justify-center items-center text-center align-middle ml-4">
                 <img
-                  width={60}
-                  height={60}
-                  className="object-cover"
+                  className="object-cover  mx-4 w-10 md:w-16"
                   src={`images/${response[0]}.png`}
                 />
               </div>
@@ -41,17 +39,17 @@ function Coin(prop) {
               <div className="flex flex-col gap-y-1">
                 <div
                   className={classNames(
-                    "text-2xl font-bold text-right mx-4",
+                    " md:text-2xl font-bold text-right mx-4",
                     {
                       "text-[#ff4040]": 0 > response[1].usd_24h_change,
                     },
                     { "text-[#30ff20]": 0 < response[1].usd_24h_change }
                   )}
                 >
-                  ${response[1].usd}
+                  ${response[1].usd.toFixed(2)}
                 </div>
                 <div className="text-[#aaa] text-sm text-right mx-4">
-                  {response[1].usd_24h_change}
+                  {response[1].usd_24h_change.toFixed(8)}
                 </div>
               </div>
             </div>

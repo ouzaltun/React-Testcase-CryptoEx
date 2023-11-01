@@ -21,7 +21,7 @@ function CoinList() {
 
   return (
     <div>
-      <div className="text-white flex  flex-col gap-3 justify-center items-center font-mono  ">
+      <div className="text-white flex  flex-col gap-3 justify-center items-center font-mono h-screen ">
         <Coin test={coins}></Coin>
       </div>
     </div>
